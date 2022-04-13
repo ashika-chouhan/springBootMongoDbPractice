@@ -1,0 +1,14 @@
+version: '3'
+services:
+    springboot-mongo-docker:
+        container_name: springboot-mongo-docker
+        build: ./
+        image: mongo:latest
+        ports:
+            - 8080:8080
+        depends_on:
+          - mongo-on-docker
+    mongo-on-docker:
+        container_name: mongo-on-docker
+        ports:
+            - 27017:27017
