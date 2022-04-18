@@ -42,5 +42,11 @@ public class EmployeeController {
         logger.info("Saving Employee.");
         return mongoTemplate.save(employeeModel);
     }
+    
+    @RequestMapping("/welcome")
+    public String welcome() {
+    	String text = "this is private page";
+    	return text;
+    }
 
 }
